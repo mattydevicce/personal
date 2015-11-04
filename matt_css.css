@@ -1,0 +1,73 @@
+#body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#navbar-name:hover {
+	color: rgb(55,155, 255);
+}
+
+.container {
+	text-align: center;
+	border: 0;
+	border-radius: 10px;
+	height: 200px;
+	margin-bottom: 200px;
+	margin-top: 100px;
+}
+
+.header-name {
+	color: blue;
+}
+
+#navbar-name {
+	color: black;
+}
+
+.about {
+	margin-top: 50px;
+}
+
+.left-sidebar {
+	width: 500px;
+	text-align: center;
+	margin: 0 auto;
+}
+
+.left-sidebar>ul>li{
+	list-style: none;
+}
+
+.left-sidebar>ul>li>a {
+	color: black;
+}
+.left-sidebar>ul>li>a:hover {
+	color: rgb(96,217,237);
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 1.1em;
+}
+
+.footer-news {
+	position: relative;
+	top: 5px;
+}
+
+#nav-pils {
+	position: relative;
+	top: 5px;
+	margin-right: 30px;
+}
+
+.footer-left {
+	list-style: none;
+	position: relative;
+	top: 10px;
+}
+
+.footer-right {
+	float: right;
+	display: inline;
+	position: relative;
+	bottom: 10px;
+	margin-right: 20px;
+}
