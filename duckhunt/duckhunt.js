@@ -4,11 +4,12 @@ $(function() {
 	// Need to set a timer
 	// ANd set a button to start the game
 	// And a scoreboard
-	$(".container").append("<div id='scoreboard'>0</div>")
+	$(".container").append("<div id='scoreboard'>"+0+"</div>")
 	$(".container").append("<div id='start-game'><div id='start-words'>Start game</div></div>")
 
 	// This is to create a duck at 450px down and a random
 	// x coordinate
+	var score = 0;
 	function createDuck(xCoord){
 		var startY = 450;
 		var duck = $("<div class='duck'></div>")
@@ -42,8 +43,11 @@ $(function() {
 
 		duck.on('click', function(e) {
 			console.log('click')
-			console.log(this)
 			duck.remove()
+			
+			score += 1
+			$("#scoreboard").text(score)
+			console.log(score)
 		})
 	}
 
@@ -76,5 +80,9 @@ $(function() {
 		startTimer();
 	}
 
+
+	function crossHair(){
+
+	}
 
 })
