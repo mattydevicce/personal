@@ -21,25 +21,24 @@ $(function() {
 		setInterval( function() {
       duck.toggleClass('flap');
     }, 250)
-	 if (duck.attr('class') == 'duck flap'){
-	    if (startX >= w/2){
-				setInterval(function() {
-					console.log(duck.attr('class'))
-					startY -= 50;
-					startX -= 50;
-		      duck.css("top", startY);
-		      // Going to move the opposite side of the screen
-		      duck.css('right', startX)
-		    }, 500)
-			} else {
-				setInterval(function() {
-					startY -= 50;
-					startX += 50;
-		      duck.css("top", startY);
-		      // Going to move the opposite side of the screen
-		      duck.css('right', startX)
-		    }, 500)			
-			}
+    console.log(duck.attr('class'))
+    if (startX >= w/2){
+			setInterval(function() {
+				console.log(duck.attr('class'))
+				startY -= 50;
+				startX -= 50;
+	      duck.css("top", startY);
+	      // Going to move the opposite side of the screen
+	      duck.css('right', startX)
+	    }, 500)
+		} else {
+			setInterval(function() {
+				startY -= 50;
+				startX += 50;
+	      duck.css("top", startY);
+	      // Going to move the opposite side of the screen
+	      duck.css('right', startX)
+	    }, 500)			
 		}
 		$(".container").append(duck)
 
