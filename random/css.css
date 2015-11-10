@@ -1,0 +1,38 @@
+
+.four {
+  position: relative;
+  bottom: 450px;
+  left: 50px;
+  background-color: green;
+}
+/*350*/
+/*250*/
+/*150*/
+.three {
+	position: relative;
+	background-color: blue;
+	bottom: 800px;
+	left: 100px;
+}
+
+.two {
+	position: relative;
+	bottom: 1050px;
+	left: 150px;
+	background-color: purple;
+}
+
+.one {
+	position: relative;
+	background-color: yellow;
+	bottom: 1200px;
+	left: 200px;
+}
+
+.five {
+	background-color: red;
+}
+
+.8 {
+	
+}

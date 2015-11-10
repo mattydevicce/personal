@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+
+<div class="five square">
+</div>
+<div class="four square c">
+</div>
+<div class="three square c">
+</div>
+<div class="two square c">
+</div>
+<div class="one square">
+</div>
+
+<script src="../duckhunt/jquery.js"></script>
+<script type="text/javascript">
+	console.log('jQuery working')
+	var square = $('.square');
+	// square.css('background-color', 'black')
+	
+	var five = $('.five')
+	var four = $('.four')
+	var three = $('.three')
+	var two = $('.two')
+	var one = $('.one')
+
+	five.css('height', '500')
+	five.css('width', '500')
+
+	four.css('height', '400')
+	four.css('width', '400')
+
+	three.css('height', '300')
+	three.css('width', '300')
+
+	two.css('height', '200')
+	two.css('width', '200')
+
+	one.css('height', '100')
+	one.css('width', '100')			
+
+	var scale = 0
+	var squares = []
+	for(var i=0; i < 100; i++) {
+		scale += (5000 - 50*i)
+		var left = 25*i;
+		$('body').append("<div class="+i+"></div>")
+		var element = $('.'+i)
+		element.css('height', 5000-(50*i))
+		element.css('width', 5000-(50*i))
+		var red = Math.ceil((Math.random()*255))
+		var green = Math.ceil(Math.random()*255)
+		var blue = Math.ceil(Math.random()*255)
+		element.css('background-color', 'rgb('+red+','+green+','+blue+')');
+		element.css('position', 'relative')
+		element.css('bottom', scale + 25*i - 4000) 
+		element.css('left', left)
+		squares.push(i.toString())
+	}
+
+	console.log(squares)
+	var last = squares.length
+	setInterval(function() {
+		if (last>0){
+			last -= 1;
+			fade(squares[last]);
+			console.log(last)
+			console.log(squares[last])
+		}
+	},10)
+
+
+	function fade(className) {
+		var element = $("."+className.toString())
+		var fade = 1;
+		var checker = 1;
+		var intervalId = setInterval(function() {
+			if (checker>0){
+				checker -= 0.1;
+				fade -= 0.1;
+			} else {
+				if (fade==1){
+					checker = 1;
+				}
+				fade += 0.1
+			}
+			element.css('opacity', fade)
+		}, 100)
+	}
+
+	// var arr = ['five', 'four', 'three', 'two', 'one']
+	// var index = 0;
+	// setInterval(function() {
+	// 	if (index < arr.length){
+	// 		fade(arr[index]);
+	// 		index += 1;
+	// 	}
+	// }, 2000)
+</script>
+
+</body>
+</html>

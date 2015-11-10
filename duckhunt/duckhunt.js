@@ -15,6 +15,7 @@ $(function() {
 		var duck = $("<div class='duck'></div>")
 		var w = window.innerWidth;
 		var startX = Math.random()*w;
+		var refreshId;
 		duck.css('top', startY)
 		duck.css('right', startX)
 		// Makes the duck flap
@@ -45,7 +46,6 @@ $(function() {
 
 		duck.on('click', function(e) {
 			console.log('click')
-			duck.removeClass('.flap')
 			duck.addClass('shot')
 			setTimeout(function() {
 				duck.remove()
