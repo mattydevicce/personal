@@ -8,31 +8,36 @@ body {
 	margin: 0;
 }
 
-.navbar {
-	position: fixed;
-	height: 50px;
-	width: 100%;
-	bottom: 0;
-	border-top: 1px solid #CCCCCC;
-	background: repeating-linear-gradient(
-	  45deg,
-	  #333399,
-	  #333399 10px,
-	  #99CCFF 10px,
-  	#99CCFF 20px
-	);
-	color: #FF0033;
-	
-}
 
 .head {
-	height: 500px;
+	height: 100vh;
 	width: 100%;
 	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9) ), url('./images/gym-weights.jpg');
-	background-size: 100% 500px;
+	background-size: 100% 100vh;
 	padding: 0;
 	margin: 0;
 	background-repeat: no-repeat;
+}
+
+.bio-text {
+	margin: 0;
+	color: white;
+	font-size: 1.7em;
+	text-align: center;
+	padding-top: 150px;
+
+}
+
+.bio {
+	height: 300px;
+	margin: 0 300px;
+}
+
+.bio-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 
 #name {
@@ -95,32 +100,7 @@ body {
 	text-align: center;
 }
 
-.arnold {
-	background: url('./images/Arnold.png');
-	height: 450px;
-	width: 450px;
-	position: relative;
-	background-repeat: no-repeat;
-	background-size: 100% 100%;
-	position: relative;
-	left: 300px;
-	top: 250px;
-}
 
-.bio {
-	height: 300px;
-	margin: 0 300px;
-	margin-top: 100px;
-}
-
-.bio-pic {
-  width: 200px;
-  height: 200px;
-  float: left;
-  border-radius: 50%;
-
-  margin-right: 15px;
-}
 
 .splitter {
 	margin: 0 50px;
