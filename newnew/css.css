@@ -9,14 +9,56 @@ body {
 }
 
 
+
+
+/*  CSS for the main head  */
+
 .head {
-	height: 100vh;
+	height: 110vh;
 	width: 100%;
 	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9) ), url('./images/gym-weights.jpg');
-	background-size: 100% 100vh;
+	background-size: 100% 110vh;
 	padding: 0;
 	margin: 0;
 	background-repeat: no-repeat;
+}
+
+.nav {
+	color: white;
+
+}
+
+.nav-links {
+	list-style: none;
+	margin: 0 auto;
+}
+
+.right-link {
+	float: right;
+	margin-right: 50px;
+	margin-top: 20px;
+	font-size: 2em;
+}
+
+.left-link {
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+	font-size: 2em;
+}
+
+.bio {
+	height: 300px;
+	margin: 0 auto;
+	width: 700px;
+}
+
+.bio-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 33%;
+  padding-top: 100px;
 }
 
 .bio-text {
@@ -24,83 +66,102 @@ body {
 	color: white;
 	font-size: 1.7em;
 	text-align: center;
-	padding-top: 150px;
+	padding-top: 100px;
 
 }
 
-.bio {
-	height: 300px;
-	margin: 0 300px;
+.soc-media {
+	position: absolute;
+	top: 103vh;
+	margin-bottom: 25px;
+	margin: 0 35%;
+	color: white;
+	width: 400px;
+	height: 100px; 
 }
 
-.bio-pic {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  margin: 0 auto;
+.soc-links {
+	list-style: none;
+	margin: 0 auto;
 }
 
-#name {
-	display: inline-block;
-	color: red;
-	position: relative;
-	text-shadow: 2px 2px 10px blue, -2px -2px 5px yellow;
-	-webkit-text-stroke: 0.5px white;
-	font-size: 3em;
+.soc-link {
+	float: left;
+	margin: 0 45px;
+	font-size: 2.1em;
+}
+
+.soc-link>a {
+	text-decoration: none;
+	color: white;
+}
+
+.soc-link>a:hover {
+	color: rgb(96,217,241);
+}
+
+
+
+
+/*  CSS for the workbench  */
+
+.skills>h1 {
 	text-align: center;
+	margin-top: 50px;
+}
+
+.workbench {
+	margin: 100px 100px;
+	background: url('./images/wood.jpg');
+
+	height: 100px;
+	width: 85%; 
+}
+
+.workbench>img {
+	height: 100px;
+	width: 100%;
+}
+
+.logos {
+	list-style: none;
 	margin: 0;
-	bottom: 25px;
+	padding: 0;
+	white-space: nowrap;
+	overflow: auto;
+	display: block;
 }
 
-#goodness {
+.logo {
 	display: inline-block;
-	color: red;
-	position: relative;
-	text-shadow: 2px 2px 10px blue, -2px -2px 5px yellow;
-	-webkit-text-stroke: 0.5px white;
-	position: relative;
-	bottom: 25px;
-	left: 42px;
 }
 
-.thought-cirlcle1 {
+.logo.left>img {
+	margin-left: 5px;
+}
+
+.logo.right>img {
+	margin-right: 5px;
+}
+.logo>img {
+	height: 50px;
+	width: 50px;
+	margin: 0;
+	margin-left: 33px;
+	margin-top: 25px;
+	border: 1px solid black;
+	float: left;
 	background-color: white;
-	height: 25px;
-	width: 25px;
-	border-radius: 50%;
-	position: relative;
-	bottom: 250px;
-	left: 450px;
+
 }
 
-.thought-cirlce2 {
-	background-color: white;
-	height: 25px;
-	width: 25px;
-	border-radius: 50%;
-	position: relative;
-	bottom: 300px;
-	left: 500px;
-}
-
-.thought-bubble {
-	border-radius: 50%;
-	background-color: white;
-	height: 130px;
-	width: 270px;
-  padding: 50px 40px;
-  position: relative;
-  left: 500px;
-  bottom: 250px;
+.whitebg {
 }
 
 
 
-.content {
-	text-align: center;
-}
 
-
+/*  CSS for the projects  */
 
 .splitter {
 	margin: 0 50px;
@@ -108,24 +169,23 @@ body {
 	border: 0.08em solid #DDDDDD;
 }
 
-.projects {
-	height: 500px;
-	margin: 40px 150px;
+.projects>h1 {
+	text-align: center;
 }
 
-.clear {
-	clear: left; display: block;
+.projects {
+
 }
+
 
 .project1 {
-	border: 1px solid black;
-	width: 400px;
-	float: left;
+	width: 600px;
+	
 }
 
 .p1-image {
-	width: 200px;
-	height: 200px;
+	width: 550px;
+	height: 300px;
 	size: 100% 100%;
 	float: left;
 	border: none;
@@ -135,11 +195,4 @@ body {
 
 .p1-list {
 	list-style: none;
-}
-
-.project2 {
-	border: 1px solid black;
-	width: 400px;
-	float: right;
-	margin-right: 150px;
 }
