@@ -6,6 +6,7 @@ html {
 body {
 	padding: 0;
 	margin: 0;
+	font-family: 'Philosopher', 'Libre Baskerville', serif;
 }
 
 
@@ -165,12 +166,13 @@ body {
 
 .splitter {
 	margin: 0 50px;
-
 	border: 0.08em solid #DDDDDD;
 }
 
 .projects>h1 {
 	text-align: center;
+	margin-top: 50px;
+	font-size: 3em;
 }
 
 .projects {
@@ -179,8 +181,10 @@ body {
 
 
 .project1 {
-	width: 600px;
-	
+	width: 1100px;
+	height: 1000px;
+	margin: 0 auto;
+	margin-top: 25px;
 }
 
 .p1-image {
@@ -189,10 +193,21 @@ body {
 	size: 100% 100%;
 	float: left;
 	border: none;
-	margin: 20px 20px;
 	border: 2px solid black;
 }
 
-.p1-list {
+.p1-desc {
 	list-style: none;
+	float: left;
+	margin-left: 60px;
+	width: 30%;
+}
+
+.p1-desc>h1 {
+	margin-top: 0;
+}
+
+.p1-desc>p {
+	overflow: auto;
+
 }
