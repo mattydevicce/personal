@@ -14,7 +14,7 @@ body {
 
 /*  CSS for the main head  */
 
-.head {
+#head {
 	height: 110vh;
 	width: 100%;
 	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9) ), url('./images/gym-weights.jpg');
@@ -41,13 +41,13 @@ body {
 	font-size: 2em;
 }
 
-.right-link:hover {
-	color: rgb(96,217,241);
-}
-
 .right-link>a {
 	text-decoration: none;
-	color: red;
+	color: white;
+}
+
+.right-link>a:hover {
+	color: rgb(96,217,241);;
 }
 
 .left-link {
@@ -57,7 +57,12 @@ body {
 	font-size: 2em;
 }
 
-.left-link:hover {
+.left-link>a {
+	text-decoration: none;
+	color: white;
+}
+
+.left-link>a:hover {
 	color: rgb(96,217,241);;
 }
 
@@ -127,7 +132,7 @@ body {
 
 /*  CSS for the workbench  */
 
-.skills>h1 {
+#skills>h1 {
 	text-align: center;
 	margin-top: 50px;
 	font-size: 3em;
@@ -191,38 +196,46 @@ body {
 	border: 0.08em solid #DDDDDD;
 }
 
-.projects>h1 {
+#projects>h1 {
 	text-align: center;
 	margin-top: 50px;
 	font-size: 3em;
 }
 
-.projects {
+#projects {
 	height: 500px;
 }
 
 
 .project1 {
-	width: 1100px;
+	width: 100%;
 
 	margin: 0 auto;
 	margin-top: 25px;
 }
 
+.p1-image-div {
+	width: 40%;
+	float: left;
+	display: inline-block;
+}
 .p1-image {
 	width: 550px;
 	height: 300px;
 	size: 100% 100%;
-	float: left;
+
 	border: none;
 	border: 2px solid black;
+	display: inline-block;
+	margin-left: 10%;
 }
 
 .p1-desc {
 	list-style: none;
-	float: left;
+	width: 40%;
 	margin-left: 60px;
-	width: 30%;
+	display: inline-block;
+	float: right;
 }
 
 .p1-desc>a {
@@ -240,7 +253,7 @@ body {
 
 .p1-desc>p {
 	overflow: auto;
-	width: 500px;
+	width: 400px;
 }
 
 .p-prog {
@@ -266,9 +279,9 @@ body {
 }
 
 .p-selectors {
-	margin: 0 45%;
-	margin-top: 380px;
-	width: 100%;
+	margin-left:45%;
+	width: 400px;
+	display: inline-block;
 }
 
 .p {

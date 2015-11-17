@@ -1,50 +1,95 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Website</title>
-  <link rel="stylesheet" type="text/css" href="matt_css.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-  <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-70021249-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+	<title>Matt Morrisey</title>
+	<link rel="stylesheet" type="text/css" href="css.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link href='https://fonts.googleapis.com/css?family=Philosopher|Libre+Baskerville' rel='stylesheet' type='text/css'>
 </head>
-<body id="body">
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" id="navbar-name" href="index.html">
-        M. Morrisey
-      </a>
-    </div>
-    <ul class="nav nav-pills navbar-right" id="nav-pils">
-      <li role="presentation" class="active"><a href="./index.html">Home</a></li>
-      <li role="presentation"><a href="profile.html">Profile</a></li>
-    </ul>
-  </div>
-</nav>  
-<div class="container">
-  <h1 class="name">Matt Morrisey</h1>
-  <p class="about">Looking for a full stack web developer position</p>
+<body>
+
+<div id="head">
+	<div class="nav">
+		<ul class="nav-links">
+			<li class="left-link"><a href="#head">M. Morrisey</a></li>
+			<li class="right-link"><a href="">Contact</a></li>
+			<li class="right-link"><a href="#projects">Projects</a></li>
+
+		</ul>
+	</div>
+	<div class="bio">
+		<img class="bio-pic" src="./images/me.jpg" align="center">
+		<p class="bio-text">I am an engineer by trade and a programmer by heart.  I currently live on Long Island and want to build in NYC.  I love to do coding challenges in <span class="header-prog">Javascript</span> and <span class="header-prog">Ruby</span> but it all started with learning <span class="header-prog">Python</span>.</p>
+	</div>
+	<div class="soc-media">
+		<ul class="soc-links">
+			<li class="soc-link"><a target="_blank" href="https://www.linkedin.com/?trk=nav_logo"><i class="fa fa-linkedin"></i></a></li>
+			<li class="soc-link"><a target="_blank" href="https://github.com/mattydevicce"><i class="fa fa-github"></i></a></li>
+		</ul>
+	</div>
 </div>
 
-<footer class="nav navbar-default">
-  <nav>
-    <ul>
-      <li class="footer-left"><a href="#">News</a></li>
-      <li class="footer-right"><a href="https://www.github.com/mattydevicce"><i class="fa fa-github"></i></a></li>
-      <li class="footer-right"><a href="https://www.linkedin.com/in/mattmorrisey"><i class="fa fa-linkedin"></i></a></li>
-    </ul>
-  </nav>
-</footer>
+<div id="skills">
+	<h1>Skills</h1>
+	<div class="workbench">
+		<!-- <img src="./images/wood.jpg"> -->
+		<ul class="logos">
+			<li class="logo left"><img src="./logos/d3.png"></li>
+			<li class="logo"><img src="./logos/github.png"></li>
+			<li class="logo"><img src="./logos/jquery.jpg"></li>
+			<li class="logo"><img src="./logos/js.png"></li>
+			<li class="logo"><img src="./logos/mongo.png"></li>
+			<li class="logo"><img src="./logos/psql.png"></li>
+			<li class="logo"><img src="./logos/node.png"></li>
+			<li class="logo"><img src="./logos/phaser.png"></li>
+			<li class="logo"><img src="./logos/python.png"></li>
+			<li class="logo"><img src="./logos/rails.png"></li>
+			<li class="logo"><img src="./logos/rspec.png"></li>
+			<li class="logo"><img src="./logos/ruby.png"></li>
+			<li class="logo"><img src="./logos/Sinatra.png"></li>
+			<li class="logo right"><img src="./logos/svg.png"></li>
+		</ul>
+	</div>
+</div>
+
+<hr class="splitter">
+
+<div id="projects">
+	<h1>Projects</h1>
+	<div class="project1">
+		<div class="p1-image-div">
+			<img class="p1-image" id="slide" src="./images/quizapp.png">
+		</div>
+		<div class="p1-desc">
+			<a href="https://project-3-quiz.herokuapp.com/"><h1>Quiz App</h1></a>
+			<p>Login: test<br>
+				 Password: test<br><br>
+				 Working with a team, we built an application that lets you create quizzes for students of a cohort if you are an instructor.  Doing the front end in mostly <span class="p-prog">React</span> was fun working with component, states, and form calls whether they were <span class="p-prog">AJAX</span> or not.  Working with a team was challenging as we had a couple merge conflicts and</p><br>
+			<ul class="tech-for-project">
+				<li class="tech">React</li>
+				<li class="tech">Rails</li>
+				<li class="tech">Javascript</li>
+				<li class="tech">HTML/SASS</li>
+				<li class="tech">AJAX</li>
+			</ul>
+		</div>
+	</div>
+	<div class="project3"></div>
+	<div class="project4"></div>
+	<div class="p-selectors">
+		<div class="p p1"></div>
+		<div class="p p2"></div>
+		<div class="p p3"></div>
+		<div class="p p4"></div>
+	</div>
+</div>
+
+<hr class="splitter">
+
+
+<script type="text/javascript" src="java.js">
+</script>
 
 </body>
 </html>
