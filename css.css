@@ -63,7 +63,7 @@ body {
 }
 
 .left-link>a:hover {
-	color: rgb(96,217,241);;
+	color: rgb(96,217,241);
 }
 
 .bio {
@@ -203,7 +203,7 @@ body {
 }
 
 #projects {
-	height: 600px;
+
 	width: 100%;
 }
 
@@ -217,7 +217,7 @@ body {
 .p1-image-div {
 	min-width: 650px;
 	float: left;
-	display: inline-block;
+	display: block;
 }
 .p1-image {
 	width: 550px;
@@ -226,7 +226,7 @@ body {
 
 	border: none;
 	border: 2px solid black;
-	display: inline-block;
+
 	margin-left: 150px;
 }
 
@@ -234,7 +234,7 @@ body {
 	list-style: none;
 	min-width: 500px;
 	margin-left: 50px;
-	float: left;
+	display: inline-block;
 }
 
 .p1-desc>a {
@@ -291,34 +291,37 @@ body {
 	border: 2px solid black;
 	display: inline-block;
 	margin-right: 30px;
-}
+}*/
 
 
 
 /*  CSS for contact form  */
 
 #contact {
-	width: 100%;
+
 }
 
 #contact>h1 {
 	text-align: center;
-
 }
 
 .contact-list {
 	list-style: none;
+	width: 300px;
 	margin: 0 auto;
-	width: 500px;
 }
 
 .contact-element {
 	text-align: center;
+
 }
 
-.contact-element>.fa {
-	margin-right: 50px;
-	color: red;
+.contact-element>a:hover {
+	color: green;
+}
+
+.contact-element>a {
+	color: blue;
 }
 
 
