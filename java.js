@@ -1,3 +1,7 @@
+$(".project2").hide()
+$(".project3").hide()
+$(".project4").hide()
+
 console.log('javascript working')
 
 image1="./images/quizapp.png"
