@@ -1,25 +1,47 @@
-$(".project2").hide()
-$(".project3").hide()
-$(".project4").hide()
-
 console.log('javascript working')
 
-image1="./images/quizapp.png"
-image2="./images/quizapp2.png"
-image3="./images/quizapp3.png"
+// This is the slideshow for the quiz application
+var quizImage1 = "./images/quizapp.png";
+var quizImage2 = "./images/quizapp2.png";
+var quizImage3 = "./images/quizapp3.png";
 
-var step = 2
-var killswitch
-$(".project1").hover(function() {
-	killswitch = setInterval(function(){
-		$("#slide").attr("src", eval("image"+step))
-		if (step<3){
-			step++
+var quizStep = 2;
+var quizKillSwitch;
+$(".p1-image").hover(function() {
+	console.log("quiz hover")
+	quizKillSwitch = setInterval(function(){
+		$("#quizSlide").attr("src", eval("quizImage"+quizStep));
+		if (quizStep<3){
+			quizStep++;
 		} else {
-			step=1
+			quizStep=1;
 		}
-	}, 2000)
+	}, 2000);
 },
 function() {
-	clearInterval(killswitch);
-})
+	console.log("kill quiz")
+	clearInterval(quizKillSwitch);
+});
+
+
+// This is the slideshow for the gym applications
+var gymImage1 = "./images/gymApp1.png";
+var gymImage2 = "./images/gymApp2.png";
+var gymImage3 = "./images/gymApp3.png";
+
+var gymStep = 2;
+var gymKillSwitch;
+$(".p2-image").hover(function() {
+	console.log("yolo")
+	gymKillSwitch = setInterval(function(){
+		$("#gymSlide").attr("src", eval("gymImage"+gymStep));
+		if (gymStep<3){
+			gymStep++;
+		} else {
+			gymStep=1;
+		}
+	}, 2000);
+},
+function() {
+	clearInterval(gymKillSwitch);
+});
