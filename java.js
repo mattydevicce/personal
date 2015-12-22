@@ -45,3 +45,26 @@ $(".p2-image").hover(function() {
 function() {
 	clearInterval(gymKillSwitch);
 });
+
+
+
+// This is the slideshow for the gym applications
+var mattsForumImage1 = "./images/mattsforum1.png";
+var mattsForumImage2 = "./images/mattsforum2.png";
+
+var mattsForumStep = 2;
+var mattsForumKillSwitch;
+$(".p3-image").hover(function() {
+	console.log("yolo")
+	mattsForumKillSwitch = setInterval(function(){
+		$("#forumSlide").attr("src", eval("mattsForumImage"+mattsForumStep));
+		if (mattsForumStep<2){
+			mattsForumStep++;
+		} else {
+			mattsForumStep=1;
+		}
+	}, 2000);
+},
+function() {
+	clearInterval(mattsForumKillSwitch);
+});

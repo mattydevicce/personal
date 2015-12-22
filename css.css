@@ -16,7 +16,7 @@ body {
 
 #head {
 	height: 110vh;
-	width: 100%;
+	min-width: 1000px;
 	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9) ), url('./images/gym-weights.jpg');
 	background-size: 100% 110vh;
 	padding: 0;
@@ -69,7 +69,7 @@ body {
 .bio {
 	height: 300px;
 	margin: 0 auto;
-	width: 700px;
+	min-width: 700px;
 }
 
 .bio-pic {
@@ -191,6 +191,11 @@ body {
 
 /*  CSS for the projects  */
 
+#hint {
+	color: red;
+	font-size: 0.3em;
+}
+
 .splitter {
 	margin: 0 50px;
 	border: 0.08em solid #DDDDDD;
@@ -204,35 +209,31 @@ body {
 
 #projects {
 
-	width: 100%;
+	min-width: 1000px;
 }
 
 
 .project1 {
-	width: 100%;
+	min-width: 1000px;
 	margin: 0 auto;
 	margin-top: 25px;
 }
 
 .p1-image-div {
-	min-width: 650px;
-	float: left;
-	display: block;
+	min-width: 500px;
+	display: inline-block;
 }
 .p1-image {
-	width: 550px;
+	min-width: 550px;
 	height: 300px;
 	size: 100% 100%;
-
-	border: none;
 	border: 2px solid black;
-
 	margin-left: 150px;
 }
 
 .p1-desc {
 	list-style: none;
-	min-width: 500px;
+	min-width: 400px;
 	margin-left: 50px;
 	display: inline-block;
 }
@@ -288,10 +289,7 @@ body {
 	width: 550px;
 	height: 300px;
 	size: 100% 100%;
-
-	border: none;
 	border: 2px solid black;
-
 	margin-left: 150px;
 }
 
@@ -305,10 +303,7 @@ body {
 	width: 550px;
 	height: 300px;
 	size: 100% 100%;
-
-	border: none;
 	border: 2px solid black;
-
 	margin-left: 150px;
 }
 
