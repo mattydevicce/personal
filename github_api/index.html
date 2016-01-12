@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Github API React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="main"></div>
+    <script type="text/babel">
+
+      var Main = React.createClass({
+        getInitialState: function() {
+          return {showResults: false, userName: ""}
+        },
+        handleSubmit: function(e){
+          e.preventDefault();
+          console.log("button pressed");
+          var userName = document.getElementsByClassName("get-github-info")[0].value
+          this.setState({showResults: true, userName: userName});
+        },
+        render: function() {
+          return (
+            <div className="home">
+              <h1>Github API fun!</h1>
+              <div className="github-input">
+                <form onSubmit={this.handleSubmit}>
+                  <input className="get-github-info" type="text" />
+                  <input className="get-github-info-submit" type="submit" />
+                </form>
+                {this.state.showResults ? <GetGithub userName={this.state.userName} /> : null}
+              </div>
+            </div>
+          )
+        } /* End render */
+      }) /* End Main */
+
+      var GetGithub = React.createClass({
+        getInitialState: function() {
+          return {showResults: false, profilePic: "#", name: "", location: ""}
+        },
+        componentDidMount: function() {
+          var githubData;
+          var url = "https://api.github.com/users/" + this.props.userName;
+          var that = this;
+          $.ajax({
+            url: url,
+            method: "GET",
+            data: {},
+            success: function(data, status, xhr) {
+              console.log("Success");
+              console.log(data);
+              console.log(data["avatar_url"]);
+              githubData = data;
+              that.setState({showResults: true, profilePic: data["avatar_url"], location: data["location"], name: data["name"]});
+            },
+            error: function(xhr, status, error) {
+              console.log("status: " + status);
+              console.log("error: " + error);
+            }
+          })
+        },
+        render: function() {
+          return (
+            <div>
+              {this.state.showResults ?
+                <div>
+                <h1>{this.state.name}</h1>
+                <img src={this.state.profilePic} />
+                <h3>Location: {this.state.location}</h3></div>
+              : null }
+            </div>
+          )
+        } /* End render */
+      }) /* End GetGithub */
+
+
+      ReactDOM.render(<Main/>, document.getElementById('main') );
+    </script>
+  </body>
+</html>

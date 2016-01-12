@@ -219,7 +219,7 @@ body {
 }
 
 
-.project1 {
+.project4 {
 	min-width: 1000px;
 	margin: 0 auto;
 	margin-top: 25px;
@@ -313,7 +313,19 @@ body {
 	margin-left: 150px;
 }
 
+.project1 {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 200px;
+}
 
+.p4-image {
+	width: 550px;
+	height: 300px;
+	size: 100% 100%;
+	border: 2px solid black;
+	margin-left: 150px;
+}
 
 /*  Other projects  */
 
