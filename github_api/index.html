@@ -51,9 +51,6 @@
             method: "GET",
             data: {},
             success: function(data, status, xhr) {
-              console.log("Success");
-              console.log(data);
-              console.log(data["avatar_url"]);
               githubData = data;
               that.setState({showResults: true, profilePic: data["avatar_url"], location: data["location"], name: data["name"]});
             },
@@ -70,12 +67,57 @@
                 <div>
                 <h1>{this.state.name}</h1>
                 <img src={this.state.profilePic} />
-                <h3>Location: {this.state.location}</h3></div>
+                <h3>Location: {this.state.location}</h3>
+                <GetGithubRepos userName={this.props.userName} />
+                </div>
               : null }
             </div>
           )
         } /* End render */
       }) /* End GetGithub */
+
+      var GetGithubRepos = React.createClass({
+        render: function() {
+          return (
+            <div className="github-repos">
+              <ul className="github-repos-list">
+                <GithubRepoNode userName={this.props.userName} />
+              </ul>
+            </div>
+          )
+        }
+      })
+
+      var GithubRepoNode = React.createClass({
+        getInitialState: function() {
+          return {name: null, link: null, language: null, size: null}
+        },
+        componentDidMount: function() {
+          var url = "https://api.github.com/users/"+this.props.userName+"/repos";
+          var that = this;
+          console.log("node worked")
+          $.ajax({
+            url: url,
+            method: "GET",
+            success: function(data, status, xhr) {
+              console.log("success: " + data);
+              console.log("name: " + data[0]["name"])
+              that.setState({name: data["name"], link: data["html_url"], language: data["language"], size: data["size"]});
+            }
+          })
+        },
+        render: function() {
+          return (
+            <div className="github-repo-element">
+              <h3>{this.state.name}</h3>
+              <h4><a href={this.state.link}>Link to repo</a></h4>
+              <h4>Language: {this.state.language}</h4>
+              <h4>Size: {this.state.size}</h4>
+            </div>
+          )
+        }
+
+      })
 
 
       ReactDOM.render(<Main/>, document.getElementById('main') );
