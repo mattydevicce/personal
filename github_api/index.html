@@ -77,18 +77,6 @@
       }) /* End GetGithub */
 
       var GetGithubRepos = React.createClass({
-        render: function() {
-          return (
-            <div className="github-repos">
-              <ul className="github-repos-list">
-                <GithubRepoNode userName={this.props.userName} />
-              </ul>
-            </div>
-          )
-        }
-      })
-
-      var GithubRepoNode = React.createClass({
         getInitialState: function() {
           return {name: null, link: null, language: null, size: null}
         },
@@ -107,12 +95,27 @@
           })
         },
         render: function() {
+          console.log(this.state.name)
+          // var githubRepoNode = for(var i=0; i<{this.state.name}.length; i++){
+          //   return <GithubRepoNode name={this.state.name} link={this.state.link} language={this.state.language} size={this.state.size}/>
+          // }
+          return (
+            <div className="github-repos">
+              <ul className="github-repos-list">
+              </ul>
+            </div>
+          )
+        }
+      })
+
+      var GithubRepoNode = React.createClass({
+        render: function() {
           return (
             <div className="github-repo-element">
-              <h3>{this.state.name}</h3>
-              <h4><a href={this.state.link}>Link to repo</a></h4>
-              <h4>Language: {this.state.language}</h4>
-              <h4>Size: {this.state.size}</h4>
+              <h3>{this.props.name}</h3>
+              <h4><a href={this.props.link}>Link to repo</a></h4>
+              <h4>Language: {this.props.language}</h4>
+              <h4>Size: {this.props.size}</h4>
             </div>
           )
         }
