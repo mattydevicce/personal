@@ -6,7 +6,7 @@
 	height: 100vh;
 	width: 100%;
 	min-width: 600px;
-	background-color: black;
+	background: url("images/nyc2.jpg") no-repeat fixed center;
 }
 
 .nav-bar-left {
@@ -15,7 +15,6 @@
 }
 
 .nav-bar-left > p {
-	color: white;
 	font-size: 2em;
 }
 
@@ -36,7 +35,7 @@
 
 }
 
-.nav-bar-right > ul > li > p {
+.nav-bar-right > ul > li > p > a {
 	color: white;
 	font-size: 2em;
 }
@@ -58,7 +57,7 @@
 }
 
 .description > p {
-	color: white;
+	color: purple;
 	text-align: center;
 	font-size: 1.5em;
 }
@@ -94,6 +93,7 @@
 		height: 750px;
 		background-color: red;
 		min-width: 600px;
+		margin-bottom:150px; 
 	}
 
 	.project-picture {
