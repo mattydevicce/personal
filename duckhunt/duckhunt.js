@@ -15,6 +15,11 @@ $(function() {
 		var duck = $("<div class='duck'></div>")
 		var w = window.innerWidth;
 		var startX = Math.random()*w;
+
+		if (startX > w/2){
+			duck.css('transform', 'scaleX(-1)');
+		}
+
 		var refreshId;
 		duck.css('top', startY)
 		duck.css('right', startX)
@@ -22,10 +27,8 @@ $(function() {
 		setInterval( function() {
       duck.toggleClass('flap');
     }, 250)
-    console.log(duck.attr('class'))
     if (startX >= w/2){
 			setInterval(function() {
-				console.log(duck.attr('class'))
 				startY -= 50;
 				startX -= 50;
 	      duck.css("top", startY);
