@@ -1,0 +1,419 @@
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Philosopher', 'Libre Baskerville', serif;
+}
+
+
+
+
+/*  CSS for the main head  */
+
+#head {
+	height: 110vh;
+	min-width: 1000px;
+	background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.9) ), url('./images/gym-weights.jpg');
+	background-size: 100% 110vh;
+	padding: 0;
+	margin: 0;
+	background-repeat: no-repeat;
+}
+
+.nav {
+	color: white;
+	height: 75px;
+	width: 100%;
+}
+
+.nav-links {
+	height: 75px;
+	list-style: none;
+	margin: 0 auto;
+}
+
+.right-link {
+	float: right;
+	margin-right: 50px;
+	margin-top: 20px;
+	font-size: 2em;
+}
+
+.right-link>a {
+	text-decoration: none;
+	color: white;
+}
+
+.right-link>a:hover {
+	color: rgb(96,217,241);;
+}
+
+.left-link {
+	float: left;
+	margin-left: 50px;
+	margin-top: 20px;
+	font-size: 2em;
+}
+
+.left-link>a {
+	text-decoration: none;
+	color: white;
+}
+
+.left-link>a:hover {
+	color: rgb(96,217,241);
+}
+
+.bio {
+	height: 300px;
+	min-width: 700px;
+}
+
+.prof-pic {
+	width: 250px;
+	margin: 0 auto;
+}
+
+.bio-pic {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 100px;
+  border: 3px solid black;
+}
+
+.bio-text {
+	width: 75%;
+	margin: 0 auto;
+	color: white;
+	font-size: 1.7em;
+	text-align: center;
+	padding-top: 100px;
+
+}
+
+
+.header-prog {
+	font-weight: bold;
+	color: rgb(96,217,241);
+}
+
+.soc-media {
+	padding-top: 175px;
+	margin-bottom: 25px;
+	color: white;
+	width: 300px;
+	height: 100px; 
+	margin: 0 auto;
+}
+
+.soc-links {
+	list-style: none;
+	margin: 0 auto;
+	width: 400px;
+}
+
+.soc-link {
+	float: left;
+	margin: 0 50px;
+	font-size: 2.1em;
+}
+
+.soc-link>a {
+	text-decoration: none;
+	color: white;
+}
+
+.soc-link>a:hover {
+	color: rgb(96,217,241);
+}
+
+
+
+
+/*  CSS for the workbench  */
+
+#skills>h1 {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 3em;
+}
+
+.workbench {
+	margin: 100px 100px;
+	background: url('./images/wood.jpg');
+
+	height: 100px;
+	width: 85%; 
+}
+
+.workbench>img {
+	height: 100px;
+	width: 100%;
+}
+
+.logos {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+	overflow: auto;
+	display: block;
+}
+
+.logo {
+	display: inline-block;
+}
+
+.logo.left>img {
+	margin-left: 5px;
+}
+
+.logo.right>img {
+	margin-right: 5px;
+}
+.logo>img {
+	height: 50px;
+	width: 50px;
+	margin: 0;
+	margin-left: 33px;
+	margin-top: 25px;
+	border: 1px solid black;
+	float: left;
+	background-color: white;
+
+}
+
+.whitebg {
+}
+
+
+
+
+/*  CSS for the projects  */
+
+#hint {
+	color: red;
+	font-size: 0.3em;
+}
+
+.splitter {
+	margin: 0 50px;
+	border: 0.08em solid #DDDDDD;
+}
+
+#projects>h1 {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 3em;
+}
+
+#projects {
+
+	min-width: 1000px;
+}
+
+
+.project4 {
+	min-width: 1000px;
+	margin: 0 auto;
+	margin-top: 25px;
+}
+
+.p1-image-div {
+	min-width: 500px;
+	display: inline-block;
+}
+.p1-image {
+	min-width: 550px;
+	height: 300px;
+	size: 100% 100%;
+	border: 2px solid black;
+	margin-left: 150px;
+}
+
+.p1-desc {
+	list-style: none;
+	min-width: 400px;
+	margin-left: 50px;
+	display: inline-block;
+}
+
+.p1-desc>a {
+	text-decoration: none;
+	color: black;
+}
+
+.p1-desc>a:hover {
+	color: rgb(96,217,241);
+}
+
+.p1-desc>a>h1 {
+	margin-top: 0;
+}
+
+.p1-desc>p {
+	overflow: auto;
+	width: 400px;
+}
+
+.p-prog {
+	font-weight: bold;
+	color: red;
+}
+
+.tech-for-project {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	width: 400px;
+}
+
+.tech {
+	display: inline-block;
+	background-color: rgb(255,0,208);
+	border-radius: 5px;
+	padding: 6px;
+	margin-right: 10px;
+	border: 2px solid black;
+	margin-bottom: 15px;
+}
+
+
+.project2 {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.p2-image {
+	width: 550px;
+	height: 300px;
+	size: 100% 100%;
+	border: 2px solid black;
+	margin-left: 150px;
+}
+
+.project3 {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.p3-image {
+	width: 550px;
+	height: 300px;
+	size: 100% 100%;
+	border: 2px solid black;
+	margin-left: 150px;
+}
+
+.project1 {
+	width: 100%;
+	margin: 0 auto;
+	margin-top: 200px;
+}
+
+.p4-image {
+	width: 550px;
+	height: 300px;
+	size: 100% 100%;
+	border: 2px solid black;
+	margin-left: 150px;
+}
+
+/*  Other projects  */
+
+.other-projects {
+	width: 100%;
+	height: 10%;
+}
+
+.other-projects-list {
+	list-style: none;
+	min-width: 1000px;
+	width: 100%;
+	display: inline-block;
+}
+
+.other-project {
+	float: left;
+	width: 250px;
+	margin-left: 100px;
+
+}
+
+.op-title-link {
+	text-decoration: none;
+	color: black;
+}
+
+.op-title-link:hover {
+	color: rgb(96,217,241);
+}
+
+.op-img {
+
+}
+
+.op-desc {
+
+}
+
+.duck-hunt {
+	height: 200px;
+	width: 200px;
+}
+
+.key-translator {
+	height: 200px;
+	width: 200px;
+}
+
+.blackjack {
+	height: 200px;
+	width: 200px;
+}
+
+
+
+/*  CSS for contact form  */
+
+#contact {
+
+}
+
+#contact>h1 {
+	text-align: center;
+}
+
+.contact-list {
+	list-style: none;
+	width: 300px;
+	margin: 0 auto;
+}
+
+.contact-element {
+	text-align: center;
+
+}
+
+.contact-element>a:hover {
+	color: green;
+}
+
+.contact-element>a {
+	color: blue;
+}
+
+
+.white-space {
+	height: 150px;
+}
+
+
