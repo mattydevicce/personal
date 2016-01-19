@@ -1,12 +1,17 @@
 /*          */
 /*  Header  */
 /*          */
+body {
+	padding: 0;
+	margin: 0;
+}
 
 .head {
 	height: 100vh;
 	width: 100%;
 	min-width: 600px;
-	background: url("images/nyc2.jpg") no-repeat fixed center;
+	background:linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.8) ), url("images/nyc4.jpg") no-repeat fixed center;
+	background-size: 100% 100vh;
 }
 
 .nav-bar-left {
@@ -57,7 +62,7 @@
 }
 
 .description > p {
-	color: purple;
+	color: white;
 	text-align: center;
 	font-size: 1.5em;
 }
