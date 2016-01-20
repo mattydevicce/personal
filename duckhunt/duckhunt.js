@@ -89,8 +89,9 @@ $(function() {
 	}
 
 
-	function crossHair(){
-
-	}
+	$(document).mousemove(function(e){
+		$(".crosshair").css('top', e.pageY - 50);
+		$(".crosshair").css('left', e.pageX - 50);
+	})
 
 })

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Github API React!</title>
+    <script src="build/react.js"></script>
+    <script src="build/react-dom.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.23/browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js" charset="utf-8"></script>
+  </head>
+  <body>
+    <div id="main"></div>
+    <script type="text/babel">
+      var GithubApp = React.createClass({
+        getInitialState: function() {
+          return {username: "", previousSearches: [], lookupUser: ""}
+        },
+        handleChange: function(e) {
+          this.setState({username: e.target.value})
+        },
+        handleSubmit: function(e) {
+          e.preventDefault();
+          this.state.previousSearches.push(this.state.username)
+          this.setState({lookupUser: this.state.username});
+          this.setState({username: ""})
+        },
+        render: function() {
+          return (
+            <div>
+              <h2>Github API Fun Using React!</h2>
+              <form onSubmit={this.handleSubmit}>
+                <input onChange={this.handleChange} value={this.state.username} />
+                <input type="submit" />
+              </form>
+              <GithubUser username={this.state.lookupUser} />
+            </div>
+          )
+        } 
+      }) /* End GithubApp */
+
+      var GithubUser = React.createClass({
+        getInitialState: function() {
+          return {avatar: "", repoUrl: "", repoData: []}
+        },
+        runAjax: function(e) {
+          if (this.props.username != ""){
+            var url = "https://api.github.com/users/" + this.props.username
+            var that = this
+            $.ajax({
+              url: url,
+              method: 'GET',
+              success: function(data, status, xhr){
+                that.setState({avatar: data["avatar_url"], repoUrl: data["repos_url"]});
+
+                var thatt = that
+                $.ajax({
+                  url: thatt.state.repoUrl,
+                  method: "GET",
+                  success: function(data, status, xhr) {
+                    thatt.setState({repoData})
+                  }
+                }) // End repo data ajax call
+              } // End success call for user data ajax call
+            }) // End user data ajax call
+          }
+        },
+        componentWillReceiveProps: function(e) {
+          console.log("component")
+        },
+        render: function() {
+          var createRepoElement = function(data) {
+            <li><h3>{data["name"]}</h3><p>Description: {data["description"]}</p><p>Size: {data["size"]}</p><p>Language: {data["language"]}</p></li>
+          }
+          return (
+            <ul>{this.state.repoData.map(createRepoElement)}</ul>
+          )
+        }
+      }) /* End GithubUser */
+
+
+
+      ReactDOM.render(<GithubApp />, document.getElementById('main'))
+    </script>
+  </body>
+</html>

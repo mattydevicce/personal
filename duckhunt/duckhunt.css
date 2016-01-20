@@ -32,10 +32,11 @@ body, html {
   background-image: url('./images/shot.png');
 }
 
-.minigun {  
-  position: absolute;
-  height: 30px;
-  width: 30px;
+.crosshair {
+  height: 100px;
+  width: 100px;
+  background: url("./images/crosshair.png") no-repeat center; 
+  position: relative;
 }
 
 .container{
